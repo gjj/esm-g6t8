@@ -1,5 +1,5 @@
 # osTicket x Nginx
----
+
 ## osTicket is breaking! 😯
 If you're getting issues like this...
 ![slackchat1](https://i.imgur.com/RJXq44e.png)
