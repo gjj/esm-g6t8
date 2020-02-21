@@ -2,9 +2,11 @@
 
 ## osTicket is breaking! 😯
 If you're getting issues like this...
+
 ![slackchat1](https://i.imgur.com/RJXq44e.png)
 
 Or this...
+
 ![slackchat2](https://i.imgur.com/q7rcIIl.png)
 
 What should you do? Normally it's good to open up your inspector, and make sure you check `Log XMLHttpRequests` as this will come in handy when you debug any Ajax requests.
@@ -49,4 +51,5 @@ _P.S._ A graceful restart (in this case, our `nginx reload` command) tells the w
 And that's it!
 
 With ❤️,
+
 g6t8
