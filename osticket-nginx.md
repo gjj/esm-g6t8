@@ -50,9 +50,9 @@ If you're curious to know what happens under-the-hood, [this article](https://ww
 
 ## Restarting Nginx gracefully
 
-Now, the changes you made to `nginx.conf` will not be updated until you restart Nginx. In this case, I'd suggest you do a `sudo service nginx reload` to [gracefully restart](https://serverfault.com/a/378585) Nginx with the new configurations. 
+Now, the changes you made to `nginx.conf` will not be updated until you restart Nginx. What's recommended is to run `sudo service nginx reload` to [gracefully restart](https://serverfault.com/a/378585) Nginx with the new configurations. 
 
-_P.S._ A graceful restart (in this case, our `nginx reload` command) tells the web sever to finish any active connections before restarting. This means that active visitors to your site will be able to finish downloading anything already in progress before the server restarts (source: [here](http://lifeonubuntu.com/restarting-apache-gracefully/)).
+_P.S._ A graceful restart (the `nginx reload` command) tells the web sever to finish any active connections before restarting. This means that active visitors to your site will be able to finish downloading anything already in progress before the server restarts (source: [here](http://lifeonubuntu.com/restarting-apache-gracefully/)).
 
 And that's it! Your osTicket tooltips and file uploads will work magically.
 
