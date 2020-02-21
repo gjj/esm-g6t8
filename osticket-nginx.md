@@ -13,7 +13,7 @@ What should you do? Normally it's good to open up your inspector, and make sure 
 
 ![inspector](https://i.imgur.com/vgbCgts.png)
 
-But in our case, Prof has already given us this [link](https://www.nginx.com/resources/wiki/start/topics/recipes/osticket/) on Slack, so why not take a look at that?
+But in our case, our CTO has already given us this [link](https://www.nginx.com/resources/wiki/start/topics/recipes/osticket/) on Slack, so why not take a look at that?
 
 # Here's the fix
 If you were to compare your version of the `nginx.conf` versus the one shown in the link above, you'll find that there are some slight differences. So here's what you should do.
