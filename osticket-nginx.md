@@ -1,6 +1,9 @@
 # osTicket x Nginx
 
+tl;dr, skip to the [fix](#heres-the-fix-).
+
 ## osTicket is breaking! 😯
+
 If you're getting issues like this...
 
 ![slackchat1](https://i.imgur.com/RJXq44e.png)
@@ -15,7 +18,9 @@ What should you do? Normally it's good to open up your inspector, and make sure 
 
 But in our case, our CTO has already given us this [link](https://www.nginx.com/resources/wiki/start/topics/recipes/osticket/) on Slack, so why not take a look at that?
 
-# Here's the fix
+
+## Here's the fix 👨‍🔧
+
 If you were to compare your version of the `nginx.conf` versus the one shown in the link above, you'll find that there are some slight differences. So here's what you should do.
 
 Locate the following `location` context (it's the very last one inside your `nginx.conf`) and comment it out.
@@ -38,6 +43,7 @@ Now go to the commented context immediately above and uncomment it.
         }
 
 ## Why though?
+
 Same same but different right? The reason lies in how osTicket routes its `ajax.php` API endpoint (e.g. `ajax.php/report/overview/graph?period=now`), and that's why you'd have to use the osTicket recipe posted on Nginx.
 
 If you're curious to know what happens under-the-hood, [this article](https://www.digitalocean.com/community/tutorials/understanding-and-implementing-fastcgi-proxying-in-nginx) provides a comprehensive overview of how Nginx proxies requests over to PHP via FastCGI using the patterns specified in the `location` context and `fastcgi_param` parameters.
