@@ -1,5 +1,17 @@
 # g6t8
 
+## Our Posts
+
 Check out our posts
 
 - [osTicket x Nginx](/esm-g6t8/osticket-nginx)
+
+## Build Status
+
+### CAT system
+
+![build-status-cat](https://api.travis-ci.com/gjj/cat.svg?token=2m1xTHi1i6wkSMJYbV5R&branch=master)
+
+### osTicket
+
+![build-status-osticket](https://api.travis-ci.com/gjj/esmos-osticket.svg?token=2m1xTHi1i6wkSMJYbV5R&branch=master)
