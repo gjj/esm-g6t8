@@ -2,15 +2,15 @@
 
 ## AWS IP address ranges are public information
 
-It's documented by Amazon! You can check out [this JSON file by Amazon](https://ip-ranges.amazonaws.com/ip-ranges.json) to see for yourself. This also means that anyone can write a bot to iterate through the IP addresses, and try all the common username and password combinations.
+It's documented by Amazon! You can check out [this post](https://aws.amazon.com/blogs/aws/aws-ip-ranges-json/) and [this JSON file by Amazon](https://ip-ranges.amazonaws.com/ip-ranges.json) to see for yourself. This also means that anyone can write a bot to iterate through the IP addresses, and try all the common username and password combinations.
 
-P.S. Have you tried incrementing/decrementing your assigned AWS IP address to see if you can see anyone else's web server? 😮
+Have you tried incrementing/decrementing your assigned AWS IP address to see if you can see anyone else's web server? 😮
 
 ## Analyse your logs
 
-And this is why you should also monitor your `access.log` files! There are some other really cool monitoring products like DataDog (btw, they come free with your [GitHub Student Developer Pack](https://education.github.com/pack/offers) just like the free domain name) that you can use to analyse your Nginx logs.
+And this is why you should also monitor your `access.log` files! There are some other really cool monitoring products like [Datadog](https://www.datadoghq.com/blog/datadog-github-student-developer-pack/) (btw, they come free with your [GitHub Student Developer Pack](https://education.github.com/pack/offers) just like the [free domain name](https://is214-esmv2.slack.com/archives/CMVBZ92NR/p1582637039002200)) that you can use to analyse your Nginx logs.
 
-We used GoAccess.io and within a day from our deployment, we saw some interesting stuff.
+We used [GoAccess](https://goaccess.io) and within a day from our deployment, we saw some interesting stuff.
 
 ![pic](https://i.imgur.com/hsG2oUO.png)
 
