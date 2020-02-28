@@ -10,7 +10,7 @@ P.S. Have you tried incrementing/decrementing your assigned AWS IP address to se
 
 And this is why you should also monitor your `access.log` files! There are some other really cool monitoring products like DataDog (btw, they come free with your [GitHub Student Developer Pack](https://education.github.com/pack/offers) just like the free domain name) that you can use to analyse your Nginx logs.
 
-We used GoAccess.io and within one day from our deployment, we saw interesting stuff.
+We used GoAccess.io and within a day from our deployment, we saw some interesting stuff.
 
 ![pic](https://i.imgur.com/hsG2oUO.png)
 
