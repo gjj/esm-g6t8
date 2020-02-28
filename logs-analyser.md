@@ -23,3 +23,7 @@ If you'd like to know more, here are some links for further readings:
 - [ThinkPHP remote code execution vulnerability article #1](https://medium.com/@knownsec404team/analysis-of-thinkphp5-remote-code-execution-vulnerability-5de8a0afb2d4)
 - [ThinkPHP article #2](https://securitynews.sonicwall.com/xmlpost/thinkphp-remote-code-execution-rce-bug-is-actively-being-exploited/)
 - [CVE-2017-9841 that explains the vulnerability in eval-stdin.php](https://nvd.nist.gov/vuln/detail/CVE-2017-9841)
+
+With ❤️,
+
+g6t8
