@@ -5,6 +5,7 @@
 Check out our posts
 
 - [osTicket x Nginx](/esm-g6t8/osticket-nginx)
+- [Why you should monitor your Nginx logs](/esm-g6t8/logs-analyser)
 
 ## Build Status
 
