@@ -1,8 +1,11 @@
 # HTTP Strict Transport Security 🔒
+
 ## Intro
+
 While checking [Mozilla Observatory](http://observatory.mozilla.org/), you probably should have noticed that there's a painful 20 points deduction if you haven't implemented HTTP Strict Transport Security in your `nginx.conf`. But if you have, you may encounter some issues below like we did.
 
 ## But first, what is it exactly?
+
 According to [Mozilla](https://infosec.mozilla.org/guidelines/web_security#http-strict-transport-security):
 
 > HTTP Strict Transport Security (HSTS) is an HTTP header that notifies user agents to only connect to a given site over HTTPS, even if the scheme chosen was HTTP. Browsers that have had HSTS set for a given site will transparently upgrade all requests to HTTPS. HSTS also tells the browser to treat TLS and certificate-related errors more strictly by disabling the ability for users to bypass the error page.
@@ -34,7 +37,7 @@ This is intended behaviour, according to [this post](https://serverfault.com/a/8
 
 ## Possible solution
 
-One way
+One way you can fix this is to upgrade CAT to be served over HTTPS. Here's what we did.
 
 With ❤️,
 
