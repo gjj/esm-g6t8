@@ -37,7 +37,7 @@ This is intended behaviour, according to [this post](https://serverfault.com/a/8
 
 ## Possible solution
 
-One way you can fix this is to upgrade CAT to be served over HTTPS. Here's what we did.
+One way you can fix this is to upgrade CAT to be served over HTTPS. You need to use the same SSL certificate and private key generated using the guides posted on Slack. Here's what we did.
 
     server {
           listen       8000 ssl http2 default_server;
@@ -46,15 +46,15 @@ One way you can fix this is to upgrade CAT to be served over HTTPS. Here's what 
           server_name  localhost;
           include /etc/nginx/default.d/*.conf;
           
-          ssl_certificate     "/home/ec2-user/ssl/certificate.crt";
-          ssl_certificate_key "/home/ec2-user/ssl/private.key";
+          ssl_certificate     "/home/ec2-user/ssl/certificate.crt"; # You can put this anywhere, just make sure to change this
+          ssl_certificate_key "/home/ec2-user/ssl/private.key"; # and this
           
           error_page    497 https://$host:8000$request_uri;
           
           # Removed for brevity
     }
 
-But there's a caveat if you're using AWS Application Load Balancer: you cannot use this solution! The reason is because AWS ALB does not allow you to listen to both HTTP and HTTPS using the same port number 8000 at the same time.
+But there's a caveat if you're using AWS Application Load Balancer: you cannot use this solution. The reason is because AWS ALB does not allow you to listen to both HTTP and HTTPS using the same port number 8000 at the same time. Consider using a subdomain in this case (and maybe get approval from CTO while doing so).
 
 
 
