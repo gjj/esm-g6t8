@@ -39,7 +39,7 @@ This is intended behaviour, according to [this post](https://serverfault.com/a/8
 
 ## Possible solution
 
-One way you can fix this is to upgrade CAT to be served over HTTPS. You need to use the same SSL certificate and private key generated using the guides posted on Slack. Here's what we did.
+One way you can fix this is to upgrade CAT to be served over HTTPS. You need to use the same SSL certificate and private key generated using the guides posted on Slack. Here's what we did to [force HTTPS redirect for non-standard ports](https://ma.ttias.be/force-redirect-http-https-custom-port-nginx/).
 
     server {
           listen       8000 ssl http2 default_server;
