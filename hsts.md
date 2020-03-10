@@ -54,7 +54,9 @@ One way you can fix this is to upgrade CAT to be served over HTTPS. You need to 
           # Removed for brevity
     }
 
-But there's a caveat if you're using AWS Application Load Balancer: you cannot use this solution. The reason is because AWS ALB does not allow you to listen to both HTTP and HTTPS using the same port number 8000 at the same time. Consider using a subdomain in this case (and maybe get approval from CTO while doing so).
+But there's a caveat if you're using AWS Application Load Balancer: you cannot use this solution. Even if you did, you'll have trouble configuring the listeners. The reason is because AWS ALB does not allow you to listen to both HTTP and HTTPS using the same port number 8000 at the same time.
+
+Consider using a subdomain in this case, and maybe get approval from CTO while doing so.
 
 
 
