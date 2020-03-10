@@ -2,7 +2,7 @@
 
 ## Intro
 
-While checking [Mozilla Observatory](http://observatory.mozilla.org/), you probably should have noticed that there's a painful 20 points deduction if you haven't implemented HTTP Strict Transport Security in your `nginx.conf`. But if you have, you may encounter some issues below like we did.
+While checking [Mozilla Observatory](http://observatory.mozilla.org/), you probably should have noticed that you haven't implemented HTTP Strict Transport Security in your `nginx.conf`. But if you have, you may encounter some issues below like we did.
 
 ## But first, what is it exactly?
 
