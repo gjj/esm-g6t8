@@ -15,7 +15,9 @@ Too abstract? Here's an example in our context that may make the issue clearer t
 2. Next, go to `http://g9t9esm2.team` and you should be redirected to `https://g9t9esm2.team`, and you'll be given the `Strict-Transport-Security` headers which will be cached by your browser.
 3. Now, revisit step 1 and visit `http://g9t9esm2.team:8000` again, you'll be redirected to `https://g9t9esm2.team:8000` (note the `s` in `https`) and your browser will probably report an SSL protocol error.
 
-At this point, if you'd like to visit your unsecured CAT system, you probably have to clear your browser cache or visit `http://g9t9esm2.team:8000` on incognito mode.
+Some of you may think that your CAT system is down, but it's not! That's because with the HSTS headers, your browser will always visit the HTTPS version even if there isn't one (see step 3) - and hence, it reports the SSL protocol error.
+
+At this point, if you'd like to visit your unsecured CAT system, you probably have to clear your browser cache or visit `http://g9t9esm2.team:8000` in incognito mode.
 
 This is intended behaviour, according to [this post](https://serverfault.com/a/882331/327653) which cites [IETF RFC 6797](https://tools.ietf.org/html/rfc6797#section-8.3) (an Internet standards document that describes how HSTS should work).
 
@@ -57,8 +59,6 @@ One way you can fix this is to upgrade CAT to be served over HTTPS. You need to 
 But there's a caveat if you're using AWS Application Load Balancer: you cannot use this solution. Even if you did, you'll have trouble configuring the listeners. The reason is because AWS ALB does not allow you to listen to both HTTP and HTTPS using the same port number 8000 at the same time.
 
 Consider using a subdomain in this case, and maybe get approval from CTO while doing so.
-
-
 
 With ❤️,
 
